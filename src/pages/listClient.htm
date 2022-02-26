@@ -1,0 +1,21 @@
+<br>
+<h4><strong>Lista de Clientes</strong></h4>
+<br>
+<table class="table table-striped">
+  <thead>
+    <tr class="bg-success">
+      <th>Codigo</th>
+      <th>Nombre</th>
+      <th>Telefono</th>
+      <th>Sector</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="client in clients">
+      <td>{{client.code}}</td>
+      <td>{{client.name}}</td>
+      <td>{{client.phone}}</td>
+      <td>{{client.zone}}</td>
+    </tr>
+  </tbody>
+</table>

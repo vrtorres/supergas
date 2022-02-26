@@ -1,22 +1,22 @@
 <h5>Ingrese nuevo cliente</h5>
 <div class="mb-3 mt-4">
   <label for="code" class="form-label">Código</label>
-  <input type="text" class="form-control" id="code" >
+  <input type="text" class="form-control" id="code" ng-model="code" >
 </div>
 <div class="mb-3">
   <label for="name" class="form-label">Nombre</label>
-  <input type="text" class="form-control" id="name">
+  <input type="text" class="form-control" id="name" ng-model="name">
 </div>
 <div class="mb-3">
   <label for="phone" class="form-label">Teléfono</label>
-  <input type="text" class="form-control" id="phone" >
+  <input type="text" class="form-control" id="phone" ng-model="phone">
 </div>
 <div class="mb-3">
   <label for="zone" class="form-label">Sector</label>
-  <input type="text" class="form-control" id="zone">
+  <input type="text" class="form-control" id="zone" ng-model="zone">
 </div>
 <div class="col-10">
-  <button class="btn btn-success">
+  <button class="btn btn-success" ng-click="saveClient()">
     Guardar
   </button>
 </div>

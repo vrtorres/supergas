@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS Purchases;
 CREATE TABLE IF NOT EXISTS Clients(
 	id int NOT NULL AUTO_INCREMENT,
 	name varchar(255),
-  code varchar(255),
+  code varchar(255) UNIQUE,
   phone varchar(255),
   zone varchar(255),
 	PRIMARY KEY(id)
@@ -19,6 +19,7 @@ CREATE TABLE IF NOT EXISTS Clients(
   	id int NOT NULL AUTO_INCREMENT,
   	date_purchase varchar(255),
     date_delivery varchar(255),
+		quantity int,
     state int,
 		client int,
 		FOREIGN KEY (state) REFERENCES Purchases_states(id),

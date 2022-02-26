@@ -5,6 +5,10 @@ app.config(function($routeProvider) {
     templateUrl : "src/pages/principal.htm"
   })
   .when("/clientes", {
-    templateUrl : "src/pages/nuevosClientes.htm"
+    templateUrl : "src/pages/newClient.htm"
+  })
+  .when("/lista_clientes", {
+    templateUrl : "src/pages/listClient.htm",
+    controller:"tableClients"
   })
 });
