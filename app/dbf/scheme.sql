@@ -20,6 +20,7 @@ CREATE TABLE IF NOT EXISTS Clients(
   	date_purchase varchar(255),
     date_delivery varchar(255),
 		quantity int,
+		designated varchar(255),
     state int,
 		client int,
 		FOREIGN KEY (state) REFERENCES Purchases_states(id),

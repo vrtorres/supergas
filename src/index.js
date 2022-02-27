@@ -1,5 +1,5 @@
 import "./components/routes.js"
 import "./components/navigationBar.js"
 import "./components/newClients.js"
-import "./components/tableClients.js"
-import "./components/purchaseModal.js"
+import "./controllers/tableClients.js"
+import "./controllers/purchaseView.js"

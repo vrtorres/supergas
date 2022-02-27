@@ -1,8 +1,42 @@
 <div class="row mt-3 pd-1">
   <div class="col-10">
-    <button class="btn btn-success">Nuevo Pedido</button>
+    <button class="btn btn-success" ng-click="newPurchase()" >Nuevo Pedido</button>
   </div>
 </div>
+
+<div id="nvPedidoForm" class="row" style="display:none">
+  <br>
+  <h4><strong>Ingrese pedido</strong></h4>
+  <div class="col-sm-4">
+    <div class="mb-3">
+      <label for="code" class="form-label">Cliente</label>
+      <input type="text" class="form-control" id="client" ng-model="client" >
+    </div>
+    <table class="table table-striped">
+      <tbody>
+        <tr ng-repeat="client in clients | filter : client | limitTo:10">
+          <td id="c{{$index}}">{{client.code}} - {{client.name}} ({{client.phone}})</td>
+          <td><button class="btn btn-secondary" ng-click="selectClient($index)">Seleccionar</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="mb-3 mt-4">
+      <label for="code" class="form-label">Cantidad</label>
+      <input type="number" class="form-control" id="qty" ng-model="qty" >
+    </div>
+    <select class="form-select" aria-label="Asignacion">
+      <option selected>Asignación</option>
+      <option value="titan">Titan</option>
+      <option value="zafiro">Zafiro</option>
+      <option value="huracan">Huracan</option>
+      <option value="express">Express</option>
+    </select>
+    <button class="btn btn-primary mt-2" ng-click="">Ingresar</button>
+  </div>
+</div>
+<br>
+<hr>
+
 <div class="row mt-3">
   <div class="col-3">
     <h6><strong>Titan</strong></h6>
